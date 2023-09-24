@@ -6,11 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SumCalculatorTest {
 
-//    @BeforeEach
-//    public void beforEach(){
-//        System.out.println("Create SumCalculator");
-//        SumCalculator sumCalculator = new SumCalculator();
-//    }
+    @BeforeEach
+    public void beforEach(){
+        System.out.println("Create SumCalculator");
+        SumCalculator sumCalculator = new SumCalculator();
+    }
     @Test
     public void testSumWithZero() {
         SumCalculator calculator = new SumCalculator();
