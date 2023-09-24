@@ -6,16 +6,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SumCalculatorTest {
 
+    private SumCalculator sumCalculator;
+
     @BeforeEach
-    public void beforEach(){
+    void beforEach(){
         System.out.println("Create SumCalculator");
         SumCalculator sumCalculator = new SumCalculator();
     }
     @Test
     public void testSumWithZero() {
-        SumCalculator calculator = new SumCalculator();
+        SumCalculator sumCalculator = new SumCalculator();
         assertThrows(IllegalArgumentException.class, () -> {
-        calculator.sum(0);
+            sumCalculator.sum(0);
     });
 }
     @Test
@@ -34,9 +36,9 @@ class SumCalculatorTest {
     }
     @Test
     public void testSumWithNegativeNumber() {
-        SumCalculator calculator = new SumCalculator();
+        SumCalculator sumCalculator = new SumCalculator();
         assertThrows(IllegalArgumentException.class, () -> {
-            calculator.sum(-5);});
+            sumCalculator.sum(-5);});
     }
 
 }
