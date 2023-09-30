@@ -9,7 +9,6 @@ class SumCalculatorTest {
     private SumCalculator sumCalculator;
 
     @BeforeEach
-    //SumCalculator sumCalculator = new SumCalculator();
     void beforEach(){
         System.out.println("Create SumCalculator");
         sumCalculator = new SumCalculator();
@@ -17,28 +16,24 @@ class SumCalculatorTest {
     }
     @Test
     public void testSumWithZero() {
-        //SumCalculator sumCalculator = new SumCalculator();
         assertThrows(IllegalArgumentException.class, () -> {
             sumCalculator.sum(0);
     });
 }
     @Test
     public void  testSumOne (){
-        //SumCalculator sumCalculator = new SumCalculator();
         int result =sumCalculator.sum(1);
         assertEquals(1,result);
 
     }
     @Test
     public void  testSumSix (){
-        //SumCalculator sumCalculator = new SumCalculator();
         int result =sumCalculator.sum(3);
         assertEquals(6,result);
 
     }
     @Test
     public void testSumWithNegativeNumber() {
-        //SumCalculator sumCalculator = new SumCalculator();
         assertThrows(IllegalArgumentException.class, () -> {
             sumCalculator.sum(-5);});
     }
