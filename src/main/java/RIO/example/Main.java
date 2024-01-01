@@ -10,5 +10,12 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.err.println(e.getMessage());
         }
+        SumCalculatorPlus sumCalculatorPlus = new SumCalculatorPlus();
+        try {
+            int sum1 = sumCalculatorPlus.sum(n);
+            System.out.println("= " + sum1);
+        }catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+        }
     }
 }
