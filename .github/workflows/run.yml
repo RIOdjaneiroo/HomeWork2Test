@@ -9,9 +9,10 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: mshick/add-pr-comment@v2
+      - uses: actions/checkout@v4
+      - name: Set up JDK 11 for x64
+        uses: actions/setup-java@v3
         with:
-          message: |
-            **Hello**
-            🌏
-            !
+          java-version: '11'
+          distribution: 'temurin'
+          architecture: x64
